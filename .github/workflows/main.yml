@@ -3,19 +3,20 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Deployment
     steps:
-    - name: Connect to EC2 instance
+    - name: Connect to EC2 instance 
       env:  
-        IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
-        SSH_KEY:    ${{ secrets.SSH_KEY }}
-      run:
-        echo "$SSH_KEY" > deploy_key.pem
-        chmod 600 deploy_key.pem
-        ssh -i deploy_key.pem ubuntu@$IP_ADDRESS
-        echo "Connected to EC2 instance"
+        IP_ADDRESS:   ${{ secrets.IP_ADDRESS }}
+        SSH_KEY:      ${{ secrets.SSH_KEY }}
+      run: |
+        export IP_ADDRESS=$IP_ADDRESS
+        echo "Attempting to connect to EC2 instance"
+        echo "$SSH_KEY" > key.pem
+        chmod 600 key.pem
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$IP_ADDRESS "./deploy.sh"
+        echo "Pipeline completed successfully"
