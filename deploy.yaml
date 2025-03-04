@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Connect to EC2 instance
+    - name: Connect to EC2 instance 
       env:  
         IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
         SSH_KEY:    ${{ secrets.SSH_KEY }}
