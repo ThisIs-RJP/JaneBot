@@ -20,3 +20,6 @@ jobs:
         chmod 600 deploy_key.pem
         ssh -i deploy_key.pem ubuntu@$IP_ADDRESS
         echo "Connected to EC2 instance"
+        source venv/bin/activate
+        cd JaneBot
+        nohup python3 main.py > bot.log 2>&1 &
