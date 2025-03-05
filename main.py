@@ -20,6 +20,9 @@ from outputs.admin  import *
 from outputs.embeds import *
 from outputs.help   import *
 
+## Cog Imports
+from cogs.admin import *
+
 ## Command Prefix
 bot = commands.Bot(command_prefix="j!", intents=discord.Intents.all(), description=DESCRIPTION, help_command=None)
 
@@ -31,6 +34,8 @@ TOKEN = os.getenv("TOKEN")
 async def on_ready():
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
 
+    await bot.add_cog(AdminCom(bot))
+
     await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='you... Waiting for j!'))
 
 @bot.event
@@ -41,7 +46,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def help(ctx, *, mes=None):
     if mes == None:
-        await ctx.send(embed=help_embed("Command Categories", "> Fun\n", random.choice(COLORS)))
+        await ctx.send(embed=help_embed("Command Categories", "> Fun\n>Admin", random.choice(COLORS)))
     
     # elif mes != "help": ## If the user wants to know the details of a command
         # pass

@@ -33,3 +33,7 @@ def help_embed(title: str, description: str, color: int) -> discord.Embed:
 
     return embed
 
+def title_embed(title: str, color: int) -> discord.Embed:
+    embed = discord.Embed(title=title, color=random.choice(COLORS))
+
+    return embed
