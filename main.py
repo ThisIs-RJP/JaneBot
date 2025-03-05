@@ -46,7 +46,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def help(ctx, *, mes=None):
     if mes == None:
-        await ctx.send(embed=help_embed("Command Categories", "> Fun\n>Admin", random.choice(COLORS)))
+        await ctx.send(embed=help_embed("Command Categories", "> Fun\n> Admin", random.choice(COLORS)))
     
     # elif mes != "help": ## If the user wants to know the details of a command
         # pass
