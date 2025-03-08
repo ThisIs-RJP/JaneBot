@@ -22,6 +22,7 @@ from outputs.help   import *
 
 ## Cog Imports
 from cogs.admin import *
+from cogs.fun import *
 
 ## Command Prefix
 bot = commands.Bot(command_prefix="j!", intents=discord.Intents.all(), description=DESCRIPTION, help_command=None)
@@ -35,6 +36,7 @@ async def on_ready():
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
 
     await bot.add_cog(AdminCom(bot))
+    await bot.add_cog(FunCom(bot))
 
     await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='you... Waiting for j!'))
 

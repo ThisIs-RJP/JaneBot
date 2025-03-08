@@ -5,7 +5,6 @@ from discord.ext.commands import has_permissions, CheckFailure
 from outputs              import *
 from outputs.embeds       import *
 
-
 ### Importing my cogs
 class AdminCom(commands.Cog):
 
