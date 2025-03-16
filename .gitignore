@@ -171,5 +171,8 @@ cython_debug/
 .pypirc
 
 # Token
-/token.env
-/token.env.bak
+/dev/token.env
+/dev/token.env.bak
+
+/prod/token.env
+/prod/token.env.bak
