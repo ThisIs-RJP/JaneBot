@@ -19,7 +19,7 @@ Scope of JaneBot
 2. Analyse the data and provide recommendations for users
 > We want to be able to recommend users to new games based off the data collected from the bot. For example, if a user is spotted playing Valorant, JaneBot will utilise a machine learning model to recommend the user similar games, which in this case could be CSGO.
 
-    > Additionally, we should also provide challenges for users who aim to get better at certain games. For instance, after the signup, we will ask users to provide some games that they would like to play, see which games they would like otto improve in, then provide challenges for them that might help them improve. By setting goals like these, we hope to help our users also get better at the games they play.
+> Additionally, we should also provide challenges for users who aim to get better at certain games. For instance, after the signup, we will ask users to provide some games that they would like to play, see which games they would like otto improve in, then provide challenges for them that might help them improve. By setting goals like these, we hope to help our users also get better at the games they play.
     
 2. Warn users that may be spending too much time on their computers
 > During signup, we can prompt users to provide a certain time frame that they would like to be online for before being notified for exceeding their own screen limit. This may seem counterproductive based off the details from the last point, but our target audience is not only for people who are looking to improve in games, but also for people who just play games casually.
