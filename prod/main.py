@@ -43,7 +43,7 @@ async def on_ready():
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("I have no idea what you're talking about :blush:")
+        await ctx.send("I have no idea what you're talking about! :blush:")
 
 @bot.command()
 async def help(ctx, *, mes=None):
