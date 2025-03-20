@@ -53,7 +53,6 @@ async def help(ctx, *, mes=None):
     # elif mes != "help": ## If the user wants to know the details of a command
         # pass
     # 
-
         # TODO
     
     elif mes.lower() in COMMANDS_LIST:
