@@ -39,3 +39,17 @@ A list of competitors include
 - ActivityWatch
 - Clockify
 - It's FOSS
+
+## 2. General Description
+
+## 2.1 System Architecture
+
+![architecture](images/architecture.png)
+
+### 2.1.1 Main Functions
+
+The main functions of our product include
+
+- A Python Discord bot that tracks the screen time of a person who have their status' set to online 
+- A full stack application deployed on Cloud that displays the metrics of our users to them in a simple, and accessible fashion
+- Using a machine learning model to analyse the metrics and to provide recommendations and warnings, such as exceeding expected daily screen time to users
