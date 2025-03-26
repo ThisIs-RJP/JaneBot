@@ -23,3 +23,5 @@ to_directory   = "prod/"
 shutil.rmtree("prod")
 
 copy_tree(from_directory, to_directory)
+
+print("Apply complete! Synced DEV and PROD")

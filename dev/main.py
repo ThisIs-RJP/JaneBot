@@ -9,7 +9,7 @@
 """
 
 ### Imports
-import os, discord, random
+import os, discord, random, Paginator
 
 from discord.ext          import commands, tasks
 from discord.ext.commands import has_permissions, CheckFailure
@@ -42,20 +42,22 @@ async def on_ready():
 
 @bot.event
 async def on_command_error(ctx, error):
+    print("Error encountered!")
+    print(error)
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("I have no idea what you're talking about :blush:")
 
 @bot.command()
 async def help(ctx, *, mes=None):
+    mes = mes.lower()
+
     if mes == None:
         await ctx.send(embed=help_embed("Command Categories", "> Fun\n> Admin", random.choice(COLORS)))
     
-    # elif mes != "help": ## If the user wants to know the details of a command
-        # pass
-    # 
+    elif mes != "help": ## If the user wants to know the details of a command
+        ## TODO : we need some sort of error management here
+        await Paginator.Simple().start(ctx, pages=help_paginator(mes, random.choice(COLORS)))
 
-        # TODO
-    
     elif mes.lower() in COMMANDS_LIST:
         await ctx.send(embed=help_embed(f"{mes.capitalize()} Commands", COMMANDS_LIST[mes.lower()], random.choice(COLORS)))
 
