@@ -10,4 +10,4 @@ cd prod
 git pull origin main
 pkill -f "python3 main.py" || true
 nohup python3 main.py > bot.log 2>&1 &
-echo "Deployment complete!
+echo "Deployment complete!"
