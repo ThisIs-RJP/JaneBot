@@ -82,7 +82,10 @@ The purpose of this registration is to feed our bot some information before cont
 Please note, the questions to be asked have not been finalised. But we would like to ask questions that give us an idea about our user so that the machine learning model will have something to work with.
 
 ### 2.3 Target Demographic
+
 The target demographic for JaneBot are for people who would often use Discord as a method to communicate with friends. JaneBot is not limited to a specific age range, but in order to comply with GDPR rules, we will restrict services to **only** adults, and thus, will not offer our services to people who register with an age that is less than 18.
+
+
 ---
 
 ### Maintainers
