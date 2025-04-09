@@ -49,14 +49,12 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def help(ctx, *, mes=None):
-    mes = mes.lower()
-
     if mes == None:
         await ctx.send(embed=help_embed("Command Categories", "> Fun\n> Admin", random.choice(COLORS)))
     
     elif mes != "help": ## If the user wants to know the details of a command
         ## TODO : we need some sort of error management here
-        await Paginator.Simple().start(ctx, pages=help_paginator(mes, random.choice(COLORS)))
+        await Paginator.Simple().start(ctx, pages=help_paginator(mes.lower(), random.choice(COLORS)))
 
     elif mes.lower() in COMMANDS_LIST:
         await ctx.send(embed=help_embed(f"{mes.capitalize()} Commands", COMMANDS_LIST[mes.lower()], random.choice(COLORS)))
