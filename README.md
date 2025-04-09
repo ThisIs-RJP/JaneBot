@@ -6,7 +6,7 @@ RobinBot Python
 
 1. Basic Setup
 - 1.1 [Prerequisites](#11-prerequisites)
-- 1.2 [Installation Instructions](#12-overview)
+- 1.2 [Installation Instructions](#12-installation-instructions)
 
 ### 1.1 Prerequisites
 
