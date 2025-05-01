@@ -12,6 +12,9 @@
     - 2.2.1 [Getting started](#221-getting-started)
 - 2.3 [Target Demographic](#23-target-demographic)
 
+3 [Technical Overview](#3-Technical-Overview)
+- 3.1 [Flow Chart Diagram](#31-flow-chart-diagram)
+
 # 1 Introduction
 
 ## 1.1 Overview
@@ -55,7 +58,7 @@ A list of competitors include
 - It's FOSS
 - Steam (includes a game time tracker in the app! But, it is worth mentioning that Steam **only** tracks time on games that are from Steam, and does not track time for games outside of Steam)
 
-## 2. General Description
+# 2. General Description
 
 ## 2.1 System Architecture
 
@@ -85,6 +88,14 @@ Please note, the questions to be asked have not been finalised. But we would lik
 
 The target demographic for JaneBot are for people who would often use Discord as a method to communicate with friends. JaneBot is not limited to a specific age range, but in order to comply with GDPR rules, we will restrict services to **only** adults, and thus, will not offer our services to people who register with an age that is less than 18.
 
+# 3 Technical Overview
+
+## 3.1 Flow chart Diagram
+
+This flow chart diagram illustrates the flow of data in our entire application, showing how the data
+moves from one process, application, or dataset to another.
+
+![flow_chart](images/flowchart.png)
 
 ---
 
