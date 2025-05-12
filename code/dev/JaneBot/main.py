@@ -26,7 +26,7 @@ from cogs.admin import *
 from cogs.fun import *
 
 ## Command Prefix
-bot = commands.Bot(command_prefix="j!", intents=discord.Intents.all(), description=DESCRIPTION, help_command=None)
+bot = commands.Bot(command_prefix="r!", intents=discord.Intents.all(), description=DESCRIPTION, help_command=None)
 
 ## Loading token
 load_dotenv("token.env")
@@ -39,7 +39,7 @@ async def on_ready():
     await bot.add_cog(AdminCom(bot))
     await bot.add_cog(FunCom(bot))
 
-    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='you... Waiting for j!'))
+    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='and babysitting Sunday. Waiting for j!'))
 
 @bot.event
 async def on_command_error(ctx, error):
