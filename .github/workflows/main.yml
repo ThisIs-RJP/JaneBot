@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Deployment
     steps:
     - name: Connect to EC2 instance 
       env:  
