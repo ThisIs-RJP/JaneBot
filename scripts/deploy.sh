@@ -4,10 +4,9 @@
 
 cd
 source venv/bin/activate
-cd JaneBot/
-pip install -r requirements.txt
-cd prod
+cd JaneBot/code/prod/JaneBot
 git pull origin main
+pip install -r requirements.txt
 pkill -f "python3 main.py" || true
 nohup python3 main.py > bot.log 2>&1 &
 echo "Deployment complete!"
