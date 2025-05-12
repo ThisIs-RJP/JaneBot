@@ -3,10 +3,14 @@
 ### This is the deployment script for deploying the bot in the server
 
 cd
+# Activating Virtual Environment
 source venv/bin/activate
-cd JaneBot/code/prod/JaneBot
+
+# Change to main directory
+cd JaneBot 
 git pull origin main
 pip install -r requirements.txt
+cd /code/prod/JaneBot
 pkill -f "python3 main.py" || true
 nohup python3 main.py > bot.log 2>&1 &
 echo "Deployment complete!"
