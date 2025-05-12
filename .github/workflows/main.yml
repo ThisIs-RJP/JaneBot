@@ -9,16 +9,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Deployment
+    environment: Production
     steps:
     - name: Connect to EC2 instance 
       env:  
-        IP_ADDRESS:   ${{ secrets.IP_ADDRESS }}
-        SSH_KEY:      ${{ secrets.SSH_KEY }}
+        IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
+        SSH_KEY:    ${{ secrets.SSH_KEY }}
       run: |
         export IP_ADDRESS=$IP_ADDRESS
         echo "Attempting to connect to EC2 instance"
         echo "$SSH_KEY" > key.pem
         chmod 600 key.pem
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$IP_ADDRESS "cd JaneBot/scripts && chmod +x deploy.sh && ./deploy.sh"
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$IP_ADDRESS "./deploy"
         echo "Pipeline completed successfully"
