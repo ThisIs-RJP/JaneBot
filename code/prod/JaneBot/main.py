@@ -13,7 +13,7 @@ import os, discord, random, Paginator
 
 from discord.ext          import commands, tasks
 from discord.ext.commands import has_permissions, CheckFailure
-from dotenv               import load_dotenv, find_dotenv
+from dotenv               import load_dotenv, find_dotenv 
 
 
 ## String Configuration Files
