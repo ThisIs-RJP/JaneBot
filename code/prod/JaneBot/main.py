@@ -60,6 +60,5 @@ async def help(ctx, *, mes=None):
     elif mes.lower() in COMMANDS_LIST:
         await ctx.send(embed=help_embed(f"{mes.capitalize()} Commands", COMMANDS_LIST[mes.lower()], random.choice(COLORS)))
 
-
 ## Run bot
 bot.run(TOKEN)

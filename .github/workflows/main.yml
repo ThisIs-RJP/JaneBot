@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'code/prod/JaneBot'
+      - 'code/prod/**'
 
 jobs:
   build:
