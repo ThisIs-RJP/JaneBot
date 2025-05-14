@@ -17,10 +17,10 @@ import shutil
 
 from distutils.dir_util import copy_tree
 
-from_directory = "../code/dev/JaneBot"
-to_directory   = "../code/prod/JaneBot"
+from_directory = "code/dev/JaneBot"
+to_directory   = "code/prod/JaneBot"
 
-shutil.rmtree("../code/prod/JaneBot")
+shutil.rmtree("code/prod/JaneBot")
 
 copy_tree(from_directory, to_directory)
 
