@@ -60,5 +60,9 @@ async def help(ctx, *, mes=None):
     elif mes.lower() in COMMANDS_LIST:
         await ctx.send(embed=help_embed(f"{mes.capitalize()} Commands", COMMANDS_LIST[mes.lower()], random.choice(COLORS)))
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send(f"Pong! {round(bot.latency * 1000)}ms")
+
 ## Run bot
 bot.run(TOKEN)
