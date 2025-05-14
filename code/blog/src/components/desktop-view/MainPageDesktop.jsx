@@ -137,6 +137,54 @@ function MainPageDesktop() {
               {/* #### TEXT BOX #### */}
               <div className="post-box-text-box">
 
+                Onboarding Hind to tech stack!
+
+              </div>
+              {/* #### TEXT BOX #### */}
+
+              {/* #### TIME STAMP BOX #### */}
+              <div className="timestamp-container">
+                22:48PM 。 2025-05-13
+              </div>
+              {/* #### TIME STAMP BOX #### */}
+            </div>
+          </div>
+        </div> 
+        {/* ##### POST BOX #####  */}
+
+        {/* ##### POST BOX #####  */}
+        <div className="post-box-container">
+          <div className="post-box">
+            <div className="inside-post-box">
+              {/* #### TOP BOX ### */}
+              <div className="post-box-top-box">
+                <div className="post-box-user-icon">
+                  <img src={RJIcon} />
+                </div>
+
+                <div className="post-box-user-icon-gap">
+                </div>
+
+                <div className="post-box-user-name-box">
+                  <div className="post-box-name-box-container">
+                    <div className="post-box-name-box-username">
+                      <div>
+                        Smoodeazy
+                      </div>
+                    </div>
+                    <div className="post-box-name-box-username-two">
+                      <div>
+                        @bestfullstackdeveloper
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* #### TOP BOX ### */}
+
+              {/* #### TEXT BOX #### */}
+              <div className="post-box-text-box">
+
                 Completed (nearly) the migration of our project to GitLab!
 
               </div>
