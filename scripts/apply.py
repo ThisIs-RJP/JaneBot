@@ -17,11 +17,11 @@ import shutil
 
 from distutils.dir_util import copy_tree
 
-from_directory = "code/dev/JaneBot"
-to_directory   = "code/prod/JaneBot"
+from_environment = input("Which environment would you like to apply your changes from?\n> ").strip()
+to_environment   = input("Which environment would you like to apply your changes to?\n> ").strip()
 
-shutil.rmtree("code/prod/JaneBot")
+shutil.rmtree(f"code/{to_environment}/JaneBot")
 
-copy_tree(from_directory, to_directory)
+copy_tree(f"code/{from_environment}/JaneBot", f"code/{to_environment}/JaneBot")
 
-print("Apply complete! Synced DEV and PROD")
+print(f"Apply complete! Synced {from_environment.upper()} and {to_environment.upper()}")
