@@ -64,5 +64,9 @@ async def help(ctx, *, mes=None):
 async def ping(ctx):
     await ctx.send(f"Pong! {round(bot.latency * 1000)}ms")
 
+@bot.command()
+async def ping_ping(ctx):
+    await ctx.send(f"Pong! {round(bot.latency * 1000)}ms - From GitLab! ♡ The pipelines look great!")
+
 ## Run bot
 bot.run(TOKEN)

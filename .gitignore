@@ -171,11 +171,7 @@ cython_debug/
 .pypirc
 
 # Token
-code/dev/JaneBot/token.env
-code/dev/JaneBot/token.env.bak
-
-code/prod/JaneBot/token.env
-code/prod/JaneBot/token.env.bak
+token.env
 
 ### Terraform ignores
 
