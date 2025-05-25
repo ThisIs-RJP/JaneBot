@@ -39,7 +39,7 @@ async def on_ready():
     await bot.add_cog(AdminCom(bot))
     await bot.add_cog(FunCom(bot))
 
-    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='and babysitting Sunday. Waiting for r!'))
+    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='and babysitting Sunday. Waiting for j!'))
 
 @bot.event
 async def on_command_error(ctx, error):
