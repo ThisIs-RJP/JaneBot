@@ -1,21 +1,23 @@
 stages:
+  - build
   - deploy
 
 variables:
   IP_ADDRESS: $IP_ADDRESS
   SSH_KEY: $SSH_KEY
 
-deploy:
-  stage: deploy
-  only:
-    refs:
-      - main
-    changes:
-      - code/prod/**
-
+deploy_robin:
+  stage: build
+  image: alpine:latest
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - "code/prod/**"
   script:
     - echo "Attempting to connect to EC2 instance"
     - echo "$SSH_KEY" | base64 -d > key.pem
     - chmod 600 key.pem
     - ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$IP_ADDRESS "./deploy"
     - echo "Pipeline completed successfully"
+  environment:
+    name: production
