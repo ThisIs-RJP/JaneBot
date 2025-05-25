@@ -39,7 +39,7 @@ async def on_ready():
     await bot.add_cog(AdminCom(bot))
     await bot.add_cog(FunCom(bot))
 
-    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='and babysitting Sunday. Waiting for j!'))
+    await bot.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='and babysitting Sunday. Waiting for r!'))
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -63,6 +63,10 @@ async def help(ctx, *, mes=None):
 @bot.command()
 async def ping(ctx):
     await ctx.send(f"Pong! {round(bot.latency * 1000)}ms")
+
+@bot.command()
+async def ping_ping(ctx):
+    await ctx.send(f"Pong! {round(bot.latency * 1000)}ms - From GitLab! ♡ The pipelines look great!")
 
 ## Run bot
 bot.run(TOKEN)
