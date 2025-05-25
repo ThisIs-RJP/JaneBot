@@ -1,0 +1,21 @@
+stages:
+  - deploy
+
+variables:
+  IP_ADDRESS: $IP_ADDRESS
+  SSH_KEY_B64: $SSH_KEY_B64
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - main
+    changes:
+      - code/prod/**
+
+  script:
+    - echo "Attempting to connect to EC2 instance"
+    - echo "$SSH_KEY_B64" | base64 -d > key.pem
+    - chmod 600 key.pem
+    - ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$IP_ADDRESS "./deploy"
+    - echo "Pipeline completed successfully"
